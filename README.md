@@ -1,28 +1,49 @@
-# IBM Employee Attrition — Power BI Dashboard
+# IBM HR Attrition — Power BI
 
-A Power BI project analysing employee attrition patterns using the IBM HR Analytics Employee Attrition & Performance dataset.
+Power BI dashboard for analysing employee attrition, workforce happiness and employee risk using the IBM HR Analytics dataset.
 
-## Project goals
+## Objectives
 
-- Understand the overall employee attrition rate.
-- Identify workforce segments with higher turnover risk.
-- Explore the relationship between overtime, travel, job role, satisfaction and attrition.
-- Provide an interactive dashboard for HR-oriented exploratory analysis.
+- Monitor employee attrition and the main risk segments.
+- Analyse workforce distribution by department, gender, education, salary and tenure.
+- Explore happiness, satisfaction and work-life balance indicators.
+- Support HR-oriented exploratory analysis through interactive filters.
 
-## Included assets
+## Dashboard pages
 
-- `powerbi/ProjetoGrupo1_v1.7.pbix` — Power BI report.
-- `data/Employee_Attrition_Dataset.csv` — source dataset in semicolon-delimited CSV format.
-- `data/Survey_PP_Table.xlsx` — supporting survey table supplied with the project.
-- `docs/analysis.md` — dataset profile and reproducible headline metrics.
+- **Overview** — active employees, gender distribution, departments, education and salary.
+- **Organizational Happiness** — happiness, job involvement, job satisfaction, environment satisfaction and work-life balance.
+- **Attrition & Risks** — attrition rate, age and tenure bands, salary, overtime and risk profiles.
+- **Risk Score** — detailed view of employees classified by risk level.
 
-> The PBIX file is approximately 4.0 MB, below GitHub's regular 100 MB per-file limit, so Git LFS is not required for this project.
+## Dashboard preview
 
-## Dataset profile
+![Dashboard cover](images/cover.png)
 
-The CSV contains 1,470 employee records and 38 fields, including age, department, job role, business travel, overtime, satisfaction scores, compensation and tenure variables. It is commonly known as the IBM HR Analytics Employee Attrition & Performance dataset and is used here for educational analysis.
+![Overview](images/overview.png)
 
-## Headline metrics from the supplied CSV
+![Organizational happiness](images/happiness.png)
+
+![Attrition and risks](images/attrition-risks.png)
+
+![Risk detail](images/risk-detail.png)
+
+![Risk detail with filters](images/risk-detail-filters.png)
+
+## Repository contents
+
+- `data/Employee_Attrition_Dataset.csv` — original semicolon-delimited dataset.
+- `data/Data_Normalization.xlsx` — normalized data prepared for the model.
+- `data/Survey.xlsx` — supporting survey data.
+- `images/` — screenshots of the Power BI report.
+- `powerbi/IBM_HR_Attrition.pbix` — Power BI report file.
+- `docs/analysis.md` — analysis notes and headline metrics.
+
+The PBIX file is approximately 4 MB, below GitHub's regular 100 MB per-file limit, so Git LFS is not required.
+
+## Headline metrics
+
+Based on the supplied employee dataset:
 
 | Metric | Value |
 |---|---:|
@@ -32,30 +53,38 @@ The CSV contains 1,470 employee records and 38 fields, including age, department
 | Average monthly income | 6,502.93 |
 | Attrition among employees working overtime | 30.53% |
 
-The report contains additional breakdowns and interactive views. These figures are calculated from the supplied CSV and may differ from a specific Power BI page if report filters are active.
+These are descriptive statistics from the educational dataset. Dashboard values may vary when filters are applied.
 
 ## How to use
 
-1. Open the PBIX file in Power BI Desktop.
-2. If Power BI asks for a source path, point the query to `data/Employee_Attrition_Dataset.csv`.
-3. Keep the CSV delimiter set to semicolon (`;`) if changing the source.
-4. Review the report pages and use slicers to explore departments, job roles, travel, overtime, satisfaction and demographics.
+1. Open `powerbi/IBM_HR_Attrition.pbix` in Power BI Desktop.
+2. If the model requests a data source, use the files in `data/`.
+3. Keep the CSV delimiter set to semicolon (`;`).
+4. Use the dashboard navigation and slicers to explore the report.
 
-## Privacy and licensing
+## Privacy and responsible use
 
-No credentials, API keys or private business data are included. The employee records are treated as a public educational dataset; do not use this project to make real employment decisions.
+This is an educational project using a public synthetic HR dataset. It does not contain credentials, API keys or private company data. Do not use the analysis to make real employment decisions.
 
-## Repository structure
+## Structure
 
 ```text
 .
 ├── data/
 │   ├── Employee_Attrition_Dataset.csv
-│   └── Survey_PP_Table.xlsx
+│   ├── Data_Normalization.xlsx
+│   └── Survey.xlsx
 ├── docs/
 │   └── analysis.md
+├── images/
+│   ├── cover.png
+│   ├── overview.png
+│   ├── happiness.png
+│   ├── attrition-risks.png
+│   ├── risk-detail.png
+│   └── risk-detail-filters.png
 ├── powerbi/
-│   └── ProjetoGrupo1_v1.7.pbix
+│   └── IBM_HR_Attrition.pbix
 ├── .gitignore
 └── README.md
 ```
