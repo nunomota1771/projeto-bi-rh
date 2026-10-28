@@ -26,8 +26,6 @@ Power BI dashboard for analysing employee attrition, workforce happiness and emp
 
 ![Risk detail](images/risk-detail.png)
 
-![Risk detail with filters](images/risk-detail-filters.png)
-
 ## Repository contents
 
 - `data/Employee_Attrition_Dataset.csv` — original semicolon-delimited dataset.
@@ -79,8 +77,7 @@ This is an educational project using a public synthetic HR dataset. It does not 
 │   ├── overview.png
 │   ├── happiness.png
 │   ├── attrition-risks.png
-│   ├── risk-detail.png
-│   └── risk-detail-filters.png
+│   └── risk-detail.png
 ├── powerbi/
 │   └── IBM_HR_Attrition.pbix
 ├── .gitignore
