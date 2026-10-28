@@ -18,8 +18,6 @@ Power BI dashboard for analysing employee attrition, workforce happiness and emp
 
 ## Dashboard preview
 
-![Dashboard cover](images/cover.png)
-
 ![Overview](images/overview.png)
 
 ![Organizational happiness](images/happiness.png)
