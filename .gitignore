@@ -1,0 +1,8 @@
+# Power BI project
+*.pbit
+*.bak
+~$*
+
+# Local Power BI / Office artefacts
+.DS_Store
+Thumbs.db
