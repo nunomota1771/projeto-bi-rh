@@ -1,3 +1,95 @@
+# Rotatividade de colaboradores — Power BI
+
+## 🇵🇹 Português
+
+Dashboard do Power BI para analisar a rotatividade de colaboradores, o bem-estar no trabalho e os perfis de risco, com o conjunto de dados IBM HR Analytics.
+
+### Objetivos
+
+- Acompanhar a rotatividade e os principais segmentos de risco.
+- Analisar a distribuição dos colaboradores por departamento, género, escolaridade, salário e antiguidade.
+- Explorar indicadores de bem-estar, envolvimento, satisfação no trabalho, satisfação com o ambiente e equilíbrio entre vida profissional e pessoal.
+- Apoiar a análise exploratória de RH através de filtros interativos.
+
+### Páginas do dashboard
+
+- **Visão geral** — colaboradores ativos, distribuição por género, departamentos, escolaridade e salário.
+- **Bem-estar organizacional** — bem-estar, envolvimento, satisfação no trabalho, satisfação com o ambiente e equilíbrio entre vida profissional e pessoal.
+- **Rotatividade e riscos** — taxa de rotatividade, escalões de idade e antiguidade, salário, horas extraordinárias e perfis de risco.
+- **Pontuação de risco** — detalhe dos colaboradores classificados por nível de risco.
+
+### Pré-visualização do dashboard
+
+![Visão geral](images/overview.png)
+
+![Bem-estar organizacional](images/happiness.png)
+
+![Rotatividade e riscos](images/attrition-risks.png)
+
+![Detalhe do risco](images/risk-detail.png)
+
+### Conteúdo do repositório
+
+- `data/Employee_Attrition_Dataset.csv` — conjunto de dados original, separado por ponto e vírgula.
+- `data/Data_Normalization.xlsx` — dados normalizados para o modelo.
+- `data/Survey.xlsx` — dados de inquérito de apoio.
+- `images/` — capturas de ecrã do relatório Power BI.
+- `powerbi/IBM_HR_Attrition.pbix` — ficheiro do relatório Power BI.
+- `docs/analysis.md` — notas de análise e principais métricas.
+
+O ficheiro PBIX tem cerca de 4 MB, abaixo do limite normal de 100 MB por ficheiro do GitHub. Não é necessário usar Git LFS.
+
+### Principais métricas
+
+Com base no conjunto de dados de colaboradores:
+
+| Métrica | Valor |
+|---|---:|
+| Colaboradores | 1 470 |
+| Taxa de rotatividade | 16,12% |
+| Idade média | 36,92 |
+| Rendimento mensal médio | 6 502,93 |
+| Rotatividade entre colaboradores com horas extraordinárias | 30,53% |
+
+Estas são estatísticas descritivas do conjunto de dados educativo. Os valores do dashboard podem variar quando se aplicam filtros.
+
+### Como utilizar
+
+1. Abre `powerbi/IBM_HR_Attrition.pbix` no Power BI Desktop.
+2. Se o modelo pedir uma origem de dados, seleciona os ficheiros da pasta `data/`.
+3. Mantém o delimitador do CSV como ponto e vírgula (`;`).
+4. Usa a navegação e os filtros do dashboard para explorar o relatório.
+
+### Privacidade e utilização responsável
+
+Este é um projeto educativo que utiliza um conjunto de dados público e sintético sobre RH. Não contém credenciais, chaves de API nem dados privados de empresas. Não uses esta análise para tomar decisões reais sobre emprego.
+
+### Estrutura do repositório
+
+```text
+.
+├── data/
+│   ├── Employee_Attrition_Dataset.csv
+│   ├── Data_Normalization.xlsx
+│   └── Survey.xlsx
+├── docs/
+│   └── analysis.md
+├── images/
+│   ├── cover.png
+│   ├── overview.png
+│   ├── happiness.png
+│   ├── attrition-risks.png
+│   └── risk-detail.png
+├── powerbi/
+│   └── IBM_HR_Attrition.pbix
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🇬🇧 English
+
 # IBM HR Attrition — Power BI
 
 Power BI dashboard for analysing employee attrition, workforce happiness and employee risk using the IBM HR Analytics dataset.
